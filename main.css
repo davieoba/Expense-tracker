@@ -1,0 +1,302 @@
+:root {
+	--color-green: #28b9b5;
+	--color-red: #ff5049;
+	--text-color: #555;
+	--color-white: #fff;
+	--color-black: #000;
+	--default-font: "source code pro";
+	--default-border: 1px solid #e7e7e7;
+	--back-color: #f7f7f7;
+}
+ 
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-weight: 200;
+	font-family: "source code pro";
+}
+
+.container__budget {
+	background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),url("./two.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	/* padding: 3rem; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.budget__title {
+	color: var(--color-white);
+	/* color: var(--text-color); */
+	text-transform: capitalize;
+	font-size: 2rem;
+	font-weight: 200;
+	margin-bottom: 1rem;
+	margin-top: 5rem;
+}
+
+.total__budget {
+	color: var(--color-white);
+	/* color: var(--text-color); */
+	font-size: 4.5rem;
+	font-weight: bold;
+	letter-spacing: 0.7rem;
+	font-weight: 300;
+	margin-bottom: 3rem;
+}
+
+.container__income {
+	background-color: var(--color-green);
+	padding: 1.3rem;
+	width: 35rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.income__text {
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 1.3rem;
+}
+
+.income__value {
+	color: var(--color-white);
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.container__expense {
+	background-color: var(--color-red);
+	padding: 1.3rem;
+	width: 35rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.expense__text {
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 1.3rem;
+}
+
+.expense__value {
+	color: var(--color-white);
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.container__add {
+	padding: 3rem;
+	background-color: var(--back-color);
+	border-bottom: var(--default-border);
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.input {
+	border: none;
+	outline: none;
+	background-color: #fff;
+	border: var(--default-border);
+	border-radius: 0.5rem;
+}
+
+.container__select {
+	padding: 1rem;
+	transition: all 0.5s;
+	transition-delay: 0s;
+	transition-timing-function: ease;
+}
+
+.container__select:focus-within {
+	border: 1px solid var(--color-green);
+}
+
+.container__desc {
+	width: 35rem;
+	padding: 1rem;
+	transition: all 0.5s;
+	transition-delay: 0s;
+	transition-timing-function: ease;
+}
+
+.container__desc:focus-within {
+	border: 1px solid var(--color-green);
+}
+
+.container__value {
+	padding: 1rem;
+	width: 10rem;
+	transition: all 0.5s;
+	transition-delay: 0s;
+	transition-timing-function: ease;
+}
+
+.container__value:focus-within {
+	border: 1px solid var(--color-green);
+}
+
+.container__btn {
+	outline: none;
+	background-color: transparent;
+	border: none;
+	fill: var(--color-green);
+}
+
+.icon {
+	height: 3rem;
+	width: 3rem;
+	cursor: pointer;
+}
+
+.icon-minus {
+	height: 2.3rem;
+	width: 2.3rem;
+	display: inline-block;
+	align-self: center;
+	vertical-align: middle;
+	fill: var(--color-red);
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.money__delete {
+	height: 100%;
+	display: inline-block;
+	align-self: center;
+}
+
+.money {
+	height: 100%;
+	display: inline-block;
+	align-self: center;
+	transition-timing-function: ease;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+	transition-property: transform;
+}
+
+.container__btn:active {
+	transform: translateY(0.3rem);
+}
+
+.container__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 5rem;
+	gap: 1.5rem;
+}
+
+.incomes {
+	width: 50%;
+}
+
+.income__list {
+}
+
+.income__list--title {
+	border-bottom: var(--default-border);
+	color: var(--color-green);
+	padding-bottom: 1.5rem;
+	font-weight: 400;
+	font-size: 1.8rem;
+}
+
+.income__items {
+	height: 100%; /* I just included this code to test the height */
+}
+
+.income__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: var(--default-border);
+	padding: 1.3rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--text-color);
+	height: 100%; /* I just included this code to test the height */
+}
+
+.income__item:hover .icon-minus {
+	visibility: visible;
+}
+
+.icon-minus:active {
+	transform: translateY(0.2rem);
+}
+
+.income__item:hover .money {
+	transform: translateX(-0.4rem);
+}
+
+.income__item--desc {
+}
+
+.income__item--value {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.expenses {
+	width: 50%;
+}
+
+.expense__list {
+}
+
+.expense__list--title {
+	border-bottom: var(--default-border);
+	color: var(--color-red);
+	padding-bottom: 1.5rem;
+	font-weight: 400;
+	font-size: 1.8rem;
+}
+
+.expense__items {
+}
+
+.expense__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: var(--default-border);
+	padding: 1.3rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--text-color);
+}
+
+.expense__item:hover .icon-minus {
+	visibility: visible;
+}
+
+.expense__item:hover .money {
+	transform: translateX(-0.4rem);
+}
+
+.expense__item--desc {
+}
+
+.expense__item--value {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body> 
+    <div class="container">
+      <div class="container__budget">
+        <h4 class="budget__title">
+          available budget in <span class="time-frame"> may 2021: </span>
+        </h4>
+        <h1 class="total__budget">0</h1>
+        <div class="container__income">
+          <span class="income__text"> Income </span>
+          <span class="income__value"> 0 </span>
+        </div>
+        <div class="container__expense">
+          <span class="expense__text"> Expenses </span>
+          <span class="expense__value"> 0 </span>
+        </div>
+      </div>
+
+      <div class="container__add">
+        <select class="container__select input">
+          <option value="inc">+</option>
+          <option value="exp">-</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Add description"
+          class="container__desc input"
+        />
+        <input type="text" placeholder="value" class="input container__value" />
+        <!-- <button class="container__btn">enter</button> -->
+        <button class="container__btn">
+          <svg class="icon icon-arrow-with-circle-right">
+            <use
+              xlink:href="symbol-defs.svg#icon-arrow-with-circle-right"
+            ></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="container__list">
+        <div class="incomes">
+          <div class="income__list">
+            <h2 class="income__list--title">INCOME</h2>
+            <div class="income__items">
+              <!-- <div class="income__item" id='00'>
+                <div class="income__item--desc">
+                  <div>salary</div>
+                </div>
+                <div class="income__item--value">
+                  <span class="money"> 33000 </span>
+                  <span class="money__delete">
+                    <svg class="icon icon-minus">
+                      <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="expenses">
+          <div class="expense__list">
+            <h2 class="expense__list--title">EXPENSES</h2>
+            <div class="expense__items">
+              <!-- <div class="expense__item" id="11">
+                <div class="expense__item--desc">
+                  <div>food</div>
+                </div>
+                <div class="expense__item--value">
+                  <span class="money"> 330 </span>
+                  <span class="money__delete">
+                    <svg class="icon icon-minus">
+                      <use xlink:href="symbol-defs.svg#icon-minus"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
